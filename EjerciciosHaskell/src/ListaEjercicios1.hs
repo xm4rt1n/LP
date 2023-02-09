@@ -1,4 +1,4 @@
-module Ejercicios1 where
+module ListaEjercicios1 where
     
     ----------------------------------------------- Hoja de ejercicios 0 -----------------------------------------------
 
@@ -19,5 +19,3 @@ module Ejercicios1 where
     -- Funcion que dado un decimal devuelve una tupla de dos elementos, su parte entera y sus dos primeros decimales (como numero entero)
     descomponerReal :: Float -> (Int, Int) 
     descomponerReal x = (truncate(x), mod (truncate(x*100)) 100)
-
-    

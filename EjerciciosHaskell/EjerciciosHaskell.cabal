@@ -4,11 +4,11 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           ProyectoPruebaHaskell
+name:           EjerciciosHaskell
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/ProyectoPruebaHaskell#readme>
-homepage:       https://github.com/githubuser/ProyectoPruebaHaskell#readme
-bug-reports:    https://github.com/githubuser/ProyectoPruebaHaskell/issues
+description:    Please see the README on GitHub at <https://github.com/githubuser/EjerciciosHaskell#readme>
+homepage:       https://github.com/githubuser/EjerciciosHaskell#readme
+bug-reports:    https://github.com/githubuser/EjerciciosHaskell/issues
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2023 Author name here
@@ -21,13 +21,15 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/ProyectoPruebaHaskell
+  location: https://github.com/githubuser/EjerciciosHaskell
 
 library
   exposed-modules:
       Lib
+      ListaEjercicios0
+      ListaEjercicios1
   other-modules:
-      Paths_ProyectoPruebaHaskell
+      Paths_EjerciciosHaskell
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -35,27 +37,27 @@ library
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable ProyectoPruebaHaskell-exe
+executable EjerciciosHaskell-exe
   main-is: Main.hs
   other-modules:
-      Paths_ProyectoPruebaHaskell
+      Paths_EjerciciosHaskell
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      ProyectoPruebaHaskell
+      EjerciciosHaskell
     , base >=4.7 && <5
   default-language: Haskell2010
 
-test-suite ProyectoPruebaHaskell-test
+test-suite EjerciciosHaskell-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_ProyectoPruebaHaskell
+      Paths_EjerciciosHaskell
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      ProyectoPruebaHaskell
+      EjerciciosHaskell
     , base >=4.7 && <5
   default-language: Haskell2010

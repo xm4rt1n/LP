@@ -1,4 +1,4 @@
-# Changelog for `PrimerProgramaHaskell`
+# Changelog for `EjerciciosHaskell`
 
 All notable changes to this project will be documented in this file.
 

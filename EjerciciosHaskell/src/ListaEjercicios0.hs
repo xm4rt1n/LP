@@ -1,4 +1,4 @@
-module Ejercicio where
+module ListaEjercicios0 where
 
     ----------------------------------------------- Hoja de ejercicios 0 -----------------------------------------------
 
@@ -27,4 +27,3 @@ module Ejercicio where
         | otherwise = y
 
   
-    
