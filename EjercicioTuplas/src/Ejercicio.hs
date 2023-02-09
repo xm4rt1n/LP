@@ -1,5 +1,7 @@
 module Ejercicio where
 
+    ----------------------------------------------- Hoja de ejercicios 0 -----------------------------------------------
+
     -- funcion que nos da el mayor entre el resto y el cociente entre x y n
     componer :: (Int, Int) -> Int
     componer (x, n) 
