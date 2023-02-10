@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      EjerciciosClase
       Lib
       ListaEjercicios0
       ListaEjercicios1
