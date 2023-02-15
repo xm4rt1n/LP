@@ -29,4 +29,6 @@ module EjerciciosClase where
 
     -- funcion que dada una frase devuelve una cadena con los caracteres que estaban en mayusculas
     devolverMayus :: [Char] -> [Char]
-    devolverMayus list = [x| x <- list, isUpper x]
+    devolverMayus list = [x | x <- list, isUpper x]
+
+    
