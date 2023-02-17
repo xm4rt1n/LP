@@ -31,4 +31,43 @@ module EjerciciosClase where
     devolverMayus :: [Char] -> [Char]
     devolverMayus list = [x | x <- list, isUpper x]
 
+    --------------------------------------------------- Tema 3 ---------------------------------------------------
+
+    -- funcion que calcula el tamaño de una lista recursivamente con una unica ecuacion
+    longitud :: [Int] -> Int
+    longitud lista = if lista == [] then 0 else 1+longitud (tail lista)
+    
+    -- funcion que calcula el tamaño de una lista recursivamente con patrones
+    longitud' :: [Int] -> Int
+    longitud' [] = 0
+    longitud' (_:xs) = 1 + longitud' xs
+
+    -- funcion recursiva no final que dadas una cadena y un caracter cuente el numero de veces que aparece el caracter en la cadena
+    contarApariciones :: String -> Char -> Int
+    contarApariciones [] _ = 0
+    contarApariciones (x:xs) c = if (x==c) then 1 + contarApariciones xs c else contarApariciones xs c
+
+    -- funcion recursiva final que dadas una cadena y un caracter cuente el numero de veces que aparece el caracter en la cadena
+    contarApariciones' :: String -> Char -> Int
+    contarApariciones' cadena c = contarAparicionesAux cadena c 0
+        -- creo una funcion auxiliar para pasarle un parametro de acumulacion en el cual voy a ir sumando y asi hacer que la 
+        -- recursividad sea final.
+    contarAparicionesAux :: String -> Char -> Int -> Int     
+    contarAparicionesAux [] _ contador = contador
+    contarAparicionesAux (x:xs) c contador = if (x==c) then contarAparicionesAux xs c (contador+1) else 
+        contarAparicionesAux xs c contador
+
+    -- funcion recursiva no final que dada una lista de numeros devuelve la suma de todos ellos
+    sumaLista :: [Int] -> Int
+    sumaLista [] = 0 
+    sumaLista (x:xs) = x + sumaLista xs 
+
+    -- funcion recursiva final que dada una lista de numeros devuelve la suma de todos ellos
+    sumaLista' :: [Int] -> Int
+    sumaLista' lista = sumaListaAux lista 0
+
+    sumaListaAux :: [Int] -> Int -> Int
+    sumaListaAux [] cont = cont
+    sumaListaAux (x:xs) cont = sumaListaAux xs (cont+x)
+
     
