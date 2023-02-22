@@ -70,4 +70,23 @@ module EjerciciosClase where
     sumaListaAux [] cont = cont
     sumaListaAux (x:xs) cont = sumaListaAux xs (cont+x)
 
+    -- funcion que calcule la longitud de una lista utilizando funciones de plegado y funciones anonimas
+    longitud'':: [Int] -> Int
+    longitud'' = foldr (\_ n -> n+1) 0
+
+    -- funcion que reciba una lista de funciones que se aplican a un segundo argumento de tipo enteros
+    -- y retorna una lista de numeros enteros con el resultado de cada funcion. 
+        -- ejercicio realizado con patrones
+    listaFunciones:: [Int -> Int] -> Int -> [Int]
+    listaFunciones [] _ = []
+    listaFunciones (f:fs) n = f n : listaFunciones fs n
+
+        -- ejercicio realizado con listas de compresion
+    listaFunciones':: [Int -> Int] -> Int -> [Int]    
+    listaFunciones' lista n = [f n| f <- lista]
+
+        -- ejercicio utilizando funciones de plegado
+    listaFunciones'':: [Int -> Int] -> Int -> [Int]
+    listaFunciones'' lista n = foldr (\f ac -> [f n] ++ ac) [] lista
+
     
