@@ -31,7 +31,7 @@ module EjerciciosClase where
     devolverMayus :: [Char] -> [Char]
     devolverMayus list = [x | x <- list, isUpper x]
 
-    --------------------------------------------------- Tema 3 ---------------------------------------------------
+    --------------------------------------------------- Tema 4 ---------------------------------------------------
 
     -- funcion que calcula el tamaño de una lista recursivamente con una unica ecuacion
     longitud :: [Int] -> Int

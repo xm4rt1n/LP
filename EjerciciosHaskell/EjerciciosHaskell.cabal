@@ -29,6 +29,8 @@ library
       Lib
       ListaEjercicios0
       ListaEjercicios1
+      Tema3_ListaEjercicios2
+      Tema4_ListaEjercicios1
   other-modules:
       Paths_EjerciciosHaskell
   hs-source-dirs:
