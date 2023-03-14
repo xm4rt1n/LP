@@ -128,6 +128,28 @@ module EjerciciosClase where
 
     -- se pide una funcion que dado un elemento y una lista de tuplas de dos elementos, busque la tupla donde el elemtno
     -- dado esta en primer lugar y devuelva su pareja en la tupla.
-    --buscarPareja :: Eq a => a -> [(a, b)] -> Maybe b
-    --buscarPareja x [] = Nothing
-    --buscarPareja x [(m, n):xs] = 
+    buscarPareja :: Eq a => a -> [(a, b)] -> Maybe b
+    buscarPareja _ [] = Nothing
+    buscarPareja e ((x,y):xs)
+        | e==x = Just y
+        | otherwise = buscarPareja e xs
+
+        -- hacerlo con funciones de plegado
+    buscarPareja' :: Eq a => a -> [(a, b)] -> Maybe b
+    buscarPareja' e lista = foldr (\(x,y) ac -> if (e==x) then Just y else ac) Nothing lista
+
+    -- funcion que dada una lista de elementos de cualquier tipo y un elemento de ese mimo tipo devuelva la posicion de ese elemento
+    posicion' :: (Eq a) => [a] -> a -> Maybe Int
+    posicion' lista x = posicionAux' lista x 0
+
+    posicionAux' :: (Eq a) => [a] -> a -> Int -> Maybe Int
+    posicionAux' [] _ _ = Nothing
+    posicionAux' (x:xs) n pos = if (x==n) then Just pos else posicionAux' xs n (pos+1)
+
+    -- Ejercicio examen marzo
+    data List a = Vacia | Cons a (List a)
+    sumaListas :: Num a => List a -> List a -> List a
+    sumaListas Vacia Vacia = Vacia
+    sumaListas Vacia ys = ys
+    sumaListas xs Vacia = xs
+    sumaListas (Cons x xs) (Cons y ys) = Cons (x + y) (sumaListas xs ys)
