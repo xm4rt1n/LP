@@ -53,9 +53,3 @@ module Tema4_ListaEjercicios1 where
 
     -- 7. Dado un numero invertir sus cifras
 
-    unirDigitos :: [Int] -> Int -> Int
-    unirDigitos [] = 0
-    unirDigitos (x:xs) =   
-
-    invertir:: Int -> Int
-    invertir n = 
