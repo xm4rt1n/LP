@@ -153,3 +153,6 @@ module EjerciciosClase where
     sumaListas Vacia ys = ys
     sumaListas xs Vacia = xs
     sumaListas (Cons x xs) (Cons y ys) = Cons (x + y) (sumaListas xs ys)
+
+    -- Ejercicio repaso global
+    

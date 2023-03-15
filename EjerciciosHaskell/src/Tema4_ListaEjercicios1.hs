@@ -31,3 +31,31 @@ module Tema4_ListaEjercicios1 where
         | otherwise = cerosAux xs x
 
         
+    -- 3. 
+
+    -- 4.
+
+
+    -- 5. Sumar las cifras de un entero
+
+    separarDigitos :: Int -> [Int]
+    separarDigitos n
+        | n == 0 = []
+        | otherwise = separarDigitos (n`div`10) ++ [n `mod`10] 
+
+    sumarCifras:: Int -> Int
+    sumarCifras n = foldr (+) 0 (separarDigitos n)
+
+    -- 6. Dados una cifra y un numero devolver si el numero contiene esa cifra
+
+    contieneCifra:: Int -> Int -> Bool
+    contieneCifra c n = foldr (\x ac -> if c == x then True else ac) False (separarDigitos n) 
+
+    -- 7. Dado un numero invertir sus cifras
+
+    unirDigitos :: [Int] -> Int -> Int
+    unirDigitos [] = 0
+    unirDigitos (x:xs) =   
+
+    invertir:: Int -> Int
+    invertir n = 
