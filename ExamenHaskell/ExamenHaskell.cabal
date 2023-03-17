@@ -4,11 +4,11 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           EjerciciosHaskell
+name:           ExamenHaskell
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/EjerciciosHaskell#readme>
-homepage:       https://github.com/githubuser/EjerciciosHaskell#readme
-bug-reports:    https://github.com/githubuser/EjerciciosHaskell/issues
+description:    Please see the README on GitHub at <https://github.com/githubuser/ExamenHaskell#readme>
+homepage:       https://github.com/githubuser/ExamenHaskell#readme
+bug-reports:    https://github.com/githubuser/ExamenHaskell/issues
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2023 Author name here
@@ -21,21 +21,14 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/EjerciciosHaskell
+  location: https://github.com/githubuser/ExamenHaskell
 
 library
   exposed-modules:
-      EjercicioGlobal
-      EjerciciosClase
-      EjerciciosExamen
+      Examen
       Lib
-      ListaEjercicios0
-      ListaEjercicios1
-      Tema3_ListaEjercicios2
-      Tema4_ListaEjercicios1
-      Tema5_ListaEjercicios
   other-modules:
-      Paths_EjerciciosHaskell
+      Paths_ExamenHaskell
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -43,27 +36,27 @@ library
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable EjerciciosHaskell-exe
+executable ExamenHaskell-exe
   main-is: Main.hs
   other-modules:
-      Paths_EjerciciosHaskell
+      Paths_ExamenHaskell
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      EjerciciosHaskell
+      ExamenHaskell
     , base >=4.7 && <5
   default-language: Haskell2010
 
-test-suite EjerciciosHaskell-test
+test-suite ExamenHaskell-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_EjerciciosHaskell
+      Paths_ExamenHaskell
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      EjerciciosHaskell
+      ExamenHaskell
     , base >=4.7 && <5
   default-language: Haskell2010
